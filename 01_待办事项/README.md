@@ -12,3 +12,10 @@ var div = document.createElement('div')
 div.appendChild(input)
 input.remove()
 ```
+
+2. 事件
+
+```
+ 鼠标单击: click
+ 键盘按下："keydown"  获取键盘的键值 ".key"
+```
