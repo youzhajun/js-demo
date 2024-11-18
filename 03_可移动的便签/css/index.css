@@ -1,0 +1,33 @@
+@import url(./reset.css);
+.container {
+    width: 280px;
+    background-color: rgb(255, 247, 209);
+    position: absolute;
+    left: 100px;
+    top: 200px;
+    border-radius: 5px;
+    /* 灰色阴影 */
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+.top {
+    background-color: rgb(255, 242, 171);
+    height: 30px;
+    cursor: move;
+    margin-bottom: 10px;
+}
+.content {
+    height: 250px;
+}
+.content p {
+    margin: 0 10px;
+    height: 25px;
+    margin-top: 5px;
+    border-bottom: 1px solid rgb(240, 240, 240);
+    line-height: 25px;
+    color: rgb(80, 10, 0);
+}
+.bottom {
+    height: 30px;
+    background-color: rgb(255, 242, 171);
+}
