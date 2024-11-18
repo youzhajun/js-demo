@@ -1,0 +1,42 @@
+@import url(./reset.css);
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 350px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.container input {
+    background-color: rgb(249, 249, 249);
+    height: 45px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 100;
+}
+.container ul {
+    background-color: rgb(249, 249, 249);
+    font-size: 13px;
+    border-top: 1px solid rgb(230, 230, 230);
+}
+.container ul li {
+    height: 30px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.container ul li span {
+    margin-left: 15px;
+}
+.container ul li a {
+    color: red;
+    margin-right: 15px;
+}
