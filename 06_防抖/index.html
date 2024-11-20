@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>06_函数防抖</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <input type="text" class="username" placeholder="请输入用户名" />
+    </div>
+
+    <script>
+      var username = document.querySelector('.username')
+
+      function debounce(fn, duration) {
+        var timerId = null
+        return function () {
+          clearTimeout(timerId)
+          timerId = setTimeout(() => {
+            // fn()
+            // 此处需要修改fn() 的 this指向与函数参数
+            var _this = this
+            var args = Array.prototype.slice.call(arguments, 0)
+            fn.apply(_this, args)
+          }, duration)
+        }
+      }
+
+      //   var handler = function () {
+      //     // 假设要进行耗时、耗费资源 操作
+      //     console.log('用户输入了: ', '??')
+      //   }
+
+      // 改进
+      var handler = debounce(function (e) {
+        console.log('用户输入了: ', this.value, e)
+      }, 500)
+      username.addEventListener('input', handler)
+    </script>
+  </body>
+</html>

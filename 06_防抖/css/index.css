@@ -1,0 +1,15 @@
+@import url(./reset.css);
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container input{
+    width: 200px;
+    height: 35px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
