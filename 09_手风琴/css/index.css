@@ -1,0 +1,29 @@
+@import url(./reset.css);
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.container {
+    margin-top: 20px;
+}
+.menu li span.title {
+    background-color: antiquewhite;
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: 400;
+}
+.menu li ul {
+    background-color: aqua;
+    text-align: center;
+    height: 0;
+    overflow: hidden;
+}
+.menu li ul li {
+    height: 25px;
+    line-height: 20px;
+}
