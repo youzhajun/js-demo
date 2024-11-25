@@ -1,0 +1,68 @@
+@import url(./reset.css);
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+image {
+    margin: 0;
+}
+.carousel {
+    width: 400px;
+    height: 230px;
+    overflow: hidden;
+    position: relative;
+}
+.carousel .img-div {
+    width: 1200px;
+    height: 230px;
+    font-size: 0;
+    
+}
+.carousel .img-div img {
+    display: inline-block;
+    width: 400px;
+    height: 230px;
+    object-fit: contain;
+}
+.carousel .direction {
+    font-size: 30px;
+    color: #ccc;
+    width: 400px;
+    position: absolute;
+}
+.carousel .direction span {
+    height: 230px;
+    width: 40px;
+    text-align: center;
+    display: inline-block;
+    line-height: 230px;
+}
+.carousel .direction span:hover {
+    background-color: #ededed24;
+}
+.carousel .direction span:last-child {
+    float: right;
+}
+
+.carousel .instruct {
+    width: 400px;
+    height: 30px;
+    /* background-color: antiquewhite; */
+    position: absolute;
+    bottom: 0px;
+    line-height: 28px;
+    text-align: center;
+}
+.carousel .instruct span {
+    display: inline-block;
+    width: 30px;
+    height: 3px;
+    background-color: #ccc;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.carousel .instruct span.checked {
+    background-color: #747373;
+}

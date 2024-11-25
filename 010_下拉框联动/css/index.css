@@ -1,0 +1,11 @@
+@import url(./reset.css);
+body {
+    display: flex;
+    justify-content: center;
+}
+.container div{
+    margin-top: 20px;
+}
+.container div select {
+    width: 120px;
+}
