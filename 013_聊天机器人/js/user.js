@@ -27,7 +27,7 @@ class FieldValidator {
 
   // 静态方法
   static async verifyList(...validatorList) {
-    const promiseList = validatorList.map((x) => x.validatorFunction)
+    const promiseList = validatorList.map((x) => x.verify())
     const result = await Promise.all(promiseList)
     return result
   }

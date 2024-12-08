@@ -3,8 +3,9 @@ const accountValidator = new FieldValidator('account', async function (val) {
     return '请填写账号'
   }
   const res = await API.exists(this.inputDom.value)
+  console.log(res)
   if (res.data) {
-    return '该账号已存在，请求改'
+    return '该账号已存在，请修改'
   }
 })
 
@@ -32,10 +33,23 @@ const pwd2Validator = new FieldValidator('pwd2', async function (val) {
 const form = document.querySelector('form')
 form.onsubmit = async function (e) {
   e.preventDefault()
-  const result = FieldValidator.verifyList(
+  console.log('表单提交事件')
+  const result = await FieldValidator.verifyList(
     accountValidator,
     nicknameValidator,
     pwdValidator,
     pwd2Validator
   )
+  if(result.every(x=>x)) {
+    const result = await API.reg({
+      loginId: accountValidator.inputDom.value,
+      loginPwd: pwdValidator.inputDom.value,
+      nickname: nicknameValidator.inputDom.value
+    })
+    if(result.code === 0){
+      // 跳转页面
+      alert('注册成功，点击确定后跳转')
+      location.href = './login.html'
+    }
+  }
 }
