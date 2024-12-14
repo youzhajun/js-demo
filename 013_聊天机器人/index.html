@@ -4,8 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>首页</title>
+    <link rel="stylesheet" href="./css/index.css" />
 </head>
 <body>
-    <h1>这里是首页</h1>
+    <div class="bg-box">
+        <video
+          class="video-wrap__video"
+          poster="https://qq-web.cdn-go.cn/zc.qq.com/fa644274/v3/img/img-bg@2x.png"
+          src="./static/bg-video.mp4"
+          tabindex="-1"
+          airplay="allow"
+          x-webkit-airplay="true"
+          playsinline="true"
+          webkit-playsinline="true"
+          x5-playsinline="true"
+          x5-video-player-type="h5"
+          x5-video-player-fullscreen="true"
+          autoplay=""
+          muted=""
+          loop 
+        ></video>
+      </div>
+    <div class="container">
+        <div class="top">
+            <div class="name">机器人</div>
+        </div>
+        <div class="history-content">
+            <div class="msg-box you-msg-box">
+                <div class="avatar">
+                    <img src="https://picsum.photos/200/200" alt="">
+                </div>
+                <div class="msg">
+                    你吃饭了吗？
+                </div>
+            </div>
+            <div class="msg-box my-msg-box">
+                <div class="avatar">
+                    <img src="https://picsum.photos/200/200" alt="">
+                </div>
+                <div class="msg">
+                    还没呢
+                </div>
+            </div>
+        </div>
+        <div class="msg-content">
+            <textarea class="input-msg">
+            </textarea>
+            <button class="send">发送</button>
+        </div>
+    </div>
+    <script src="./js/api.js"></script>
+    <script src="./js/idnex.js"></script>
 </body>
 </html>

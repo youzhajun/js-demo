@@ -1,0 +1,92 @@
+@import url(./common.css);
+.container {
+    width: 80vw;
+    background-color: #F5F5F5;
+    margin: 80px auto;
+    border-radius: 8px;
+}
+.container .top {
+    height: 40px;
+    border-bottom: 1px solid #ccc;
+}
+.container .top .name {
+    font-size: 15px;
+    line-height: 40px;
+    margin-left: 20px;
+}
+.container .history-content {
+    height: 40vh;
+    border-bottom: 1px solid #ccc;
+}
+.container .msg-content {
+    position: relative;
+}
+.container .input-msg {
+    height: 20vh;
+    width: 80vw;
+    background-color: #F5F5F5;
+    resize: none;
+    box-sizing: border-box;
+    border: 0;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 400;
+}
+.container .send {
+    width: 80px;
+    height: 30px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #8ccde3;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+}
+.container .send.active {
+    font-size: 12px;
+    font-weight: 500;
+}
+.avatar img{
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.history-content {
+    margin-top: 30px;
+}
+.history-content .msg-box{
+    width: 70%;
+    overflow: hidden;
+    margin: 10px;
+}
+.history-content .msg-box .avatar {
+    float: left;
+}
+.history-content .msg-box .msg {
+    float: left;
+    margin-left: 10px;
+    line-height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 0 8px;
+    color: #fff;
+    background-color: #009CFF;
+    font-size: 14px;
+}
+.history-content .msg-box.you-msg-box .msg{
+    background-color: #fff;
+    color: #000;
+}
+.history-content .msg-box.my-msg-box {
+    float: right;
+}
+.history-content .msg-box.my-msg-box .msg {
+    float: right;
+    margin: 0 10px 0 0;
+}
+.history-content .msg-box.my-msg-box .avatar {
+    float: right;
+}
